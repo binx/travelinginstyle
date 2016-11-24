@@ -1,0 +1,270 @@
+<head>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <style>
+    	body {
+    		font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+    	}
+    	h1 {
+    		font-family: 'Poiret One', cursive;
+    		text-align: center;
+    		margin: 20px 0;
+    		font-size: 80px;
+    	}
+    	.tagline {
+    		text-align: center;
+    		margin-bottom: 50px;
+    		font-size: 18px;
+    		font-weight: 200;
+    		letter-spacing: .5px;
+    	}
+    	.company {
+    		background: #eee;
+    		clear: both;
+    		border-top: 10px solid black;    		
+    	}
+    	.product-grid {
+    		width: 36%;
+    		float: right;
+    	}
+    	.right .product-grid {
+    		float: left;
+    	}
+    	.wrapper {
+    		width: 50%;
+    		padding-bottom: 50%;
+    		position: relative;
+    		display: inline-block;
+    		float: left;
+    	}
+    	.wrapper > div {
+    		position: absolute;
+    		width: 100%;
+    		height: 100%;
+    		background-size: cover;
+    		background-position: 50%;
+    	}
+    	.bg-wrapper {
+    		width: 64%;
+    		padding-bottom: 36%;
+    		position: relative;
+    		float: left;
+    	}
+    	.bg {
+    		position: absolute;
+    		width: 100%;
+    		height: 100%;
+    		background-size: cover;
+    	}
+    	.logo {
+    		position: absolute; 
+    		top: 20px; 
+    		left: 20px;
+    	}
+    	.right .bg-wrapper {
+    		float: right;
+    	}
+    	.info {
+    		position: absolute;
+    		top: 27%;
+    		left: 20px;
+    		width: 50%;
+    	}
+    	.info p {
+    		background-color: white;
+    		font-size: 18px;
+    		padding: 5px 10px;
+    		display: inline-block;
+    		margin: 0 0 10px 0;
+    		float: left;
+    		clear: both;
+    	}
+    	.discount, .discount-top {
+    		background: white;
+    		padding: 10px;
+    		font-family: courier;
+    		font-size: 24px;
+    		display: inline-block;
+    		margin: 15px 0 25px 0;
+    	}
+    	.discount-top { display: none; }
+    	p.deadline {
+    		font-size: 14px;
+    		margin-bottom: 5px;
+    		color: #808080;
+    	}
+    	@media only screen and (max-width: 1220px)  {
+    		.info p { font-size: 16px; }
+    		.discount { font-size: 22px; }
+    	}
+    	@media only screen and (max-width: 768px)  {
+    		.bg-wrapper {
+    			width: 100%;
+    			height: 35%;
+    		}
+    		.product-grid { width: 100%; }
+    		.wrapper {
+    			width: 25%;
+    			padding-bottom: 25%;
+    		}
+    	}
+    	@media only screen and (max-width: 450px)  {
+    		h1 { font-size: 48px; }
+    		.tagline { font-size: 13px; margin-bottom: 10px; }
+    		.bg-wrapper { height: auto; padding: 0;}
+    		.bg { height: 300px; position: relative; }
+    		.logo {
+    			position: relative;
+			    margin: 20px auto 10px;
+			    top: auto;
+			    left: auto;
+			    display: block;
+			    width: 60% !important;
+    		}
+    		.product-grid {
+    			margin-top: 10px;
+    		}
+    		.wrapper {
+    			width: 50%;
+    			padding-bottom: 50%;
+    		}
+    		.info {
+    			position: relative;
+    			width: 100%;
+    			background: transparent;
+    			top: auto;
+    			left: auto;
+    		}
+    		.info p { 
+    			font-size: 14px; 
+    			margin-bottom: 0px;
+    		}
+    		.discount { display: none; }
+    		.discount-top { 
+    			font-size: 22px;
+    			display: block; 
+    			margin: 0 auto 10px; 
+    			text-align: center;
+    		}
+    	}
+    </style>
+</head>
+<body>
+	<h1>traveling in style</h1>
+	<p class="tagline">Custom gifts made from maps! Each created by <a href="http://rachelbinx.com" style="text-decoration: none; color: #808080;">Rachel Binx</a>.</p>
+	<div class="discount-top">15% off all orders, on all sites, with MAPPYHOLIDAYS</div>
+	<div class="company">
+		<div class="bg-wrapper">
+			<div class="bg" style="background-image: url(img/bottom.jpg); background-position: 50%;"></div>
+			<img src="logo/logo_black.png" class="logo" width="50%">
+			<div class="info">
+				<p>Pick a location, express your style, and save it as a high-resolution map print.</p>
+				<p>Available as poster, canvas, or framed poster!</p>
+				<div class="discount">15% off with MAPPYHOLIDAYS</div>
+				<p class="deadline">Holiday Ordering Deadline:</p>
+				<p class="deadline">Dec. 13th</p>
+			</div>
+		</div>
+		<div class="product-grid">
+			<div class="wrapper">
+				<div style="background-image: url(img/ssss.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/map1.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/map3.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/sss.jpg);"></div>
+			</div>
+		</div>
+	</div>
+	<div class="company">
+		<div class="bg-wrapper">
+			<div class="bg" style="background-image: url(img/dd.jpeg); background-position: 50% 0; -webkit-transform: scaleX(-1);"></div>
+			<img src="logo/logo_small.png" class="logo" width="50%">
+			<div class="info">
+				<p>Custom jewelry created from the elevation of mountains or the contour of shorelines.</p>
+				<p>Available as a necklace, ring, or matching necklace set for you and a bff!</p>
+				<div class="discount">15% off with MAPPYHOLIDAYS</div>
+				<p class="deadline">Holiday Ordering Deadlines:</p>
+				<p class="deadline">Silver and Brass: Nov. 25th</p>
+				<p class="deadline">Bamboo and Acrylic: Dec. 8th</p>
+			</div>
+		</div>
+		<div class="product-grid">
+			<div class="wrapper">
+				<div style="background-image: url(img/a0.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/a3.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/1.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/a1.jpg);"></div>
+			</div>
+		</div>
+	</div>
+	<div class="company">
+		<div class="bg-wrapper">
+			<div class="bg" style="background-image: url(img/inspired.jpg); background-position: 70% 100%;"></div>
+			<img src="logo/logo_knockout.png" class="logo" width="35%">
+			<div class="info">
+				<p>Whether it's celebrating a trip or remembering your home,
+				meshu helps you create mementos from the places that are important to you.</p>
+				<div class="discount">15% off with MAPPYHOLIDAYS</div>
+				<p class="deadline">Holiday Ordering Deadline:</p>
+				<p class="deadline">Silver and Brass: Nov. 25th</p>
+				<p class="deadline">Bamboo and Acrylic: Dec. 8th</p>
+			</div>
+			
+		</div>
+		<div class="product-grid">
+			<div class="wrapper">
+				<div style="background-image: url(img/m3.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/g5.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/m15.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/o0.jpg);"></div>
+			</div>
+		</div>
+	</div>
+	<div class="company">
+		<div class="bg-wrapper">
+			<div class="bg" style="background-image: url(img/mono.jpg); -webkit-transform: scaleX(-1);"></div>
+			<img src="logo/mono.png" class="logo" width="50%">
+			<div class="info">
+				<p>Design your own map clothing and accessories!</p>
+				<div class="discount">15% off with MAPPYHOLIDAYS</div>
+				<p class="deadline">Holiday Ordering Deadline:</p>
+				<p class="deadline">Dec. 8th</p>
+			</div>
+		</div>
+		<div class="product-grid">
+			<div class="wrapper">
+				<div style="background-image: url(img/z1.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/z5.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/z2.jpg);"></div>
+			</div>
+			<div class="wrapper">
+				<div style="background-image: url(img/z4.jpg);"></div>
+			</div>
+		</div>
+	</div>
+    <script defer>
+    </script>
+</body>
